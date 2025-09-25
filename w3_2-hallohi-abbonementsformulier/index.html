@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnement Formulier</title>
+</head>
+<body>
+    <h2>Je abonnement binnen 5 minuten geregeld!</h2>
+    <form>
+        <label>Voornaam:</label><br>
+        <input type="text" name="voornaam" pattern="[^\d]+" required><br>
+
+        <label>Achternaam:</label><br>
+        <input type="text" name="achternaam" pattern="[^\d]+" required><br><br>
+
+        <label>Aanhef:</label><br>
+        <input type="radio" name="aanhef" value="Dhr." checked> Dhr.
+        <input type="radio" name="aanhef" value="Mevr."> Mevr.
+        <input type="radio" name="aanhef" value="Anders"> Anders<br><br>
+
+        <label>Straat met huisnummer:</label><br>
+        <input type="text" name="straat" placeholder="Molenstraat 19" required><br>
+
+        <label>Postcode:</label><br>
+        <input type="text" name="postcode" pattern="\d{4}\s?[A-Za-z]{2}" placeholder="9873 DK" required><br>
+
+        <label>Woonplaats:</label><br>
+        <input type="text" name="woonplaats" required><br>
+
+        <label>Land:</label><br>
+        <input type="text" name="land" required><br>
+
+        <label>IBAN-nummer:</label><br>
+        <input type="text" name="iban" pattern="NL\d{2}[A-Z]{4}\d{10}" maxlength="18" placeholder="NL00AAAA1234567890" required><br>
+
+        <label>Type abonnement:</label><br>
+        <select name="type" required>
+            <option value="Mobiel">Mobiel</option>
+            <option value="Glasvezel">Glasvezel</option>
+            <option value="TV">TV</option>
+        </select><br>
+
+        <label>Datum van ingang abonnement:</label><br>
+        <input type="date" name="startdatum" min="<?= date('Y-m-d') ?>" required><br>
+
+        <label>Looptijd abonnement (maanden):</label><br>
+        <input type="number" name="looptijd" min="1" required><br>
+
+        <label>Aantal gebruikers op het abonnement:</label><br>
+        <input type="number" name="gebruikers" min="1" max="4" required><br>
+
+        <label>E-mailadres:</label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Wachtwoord aanmaken:</label><br>
+        <input type="password" name="wachtwoord" required><br><br>
+
+        <button type="submit">Sluit abonnement af</button>
+    </form>
+</body>
+</html>
