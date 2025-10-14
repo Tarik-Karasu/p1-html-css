@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+flex-direction: row-reverse;
+}
+
+.container div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.sq1{
+background-color: blue;
+}
+.sq2{
+background-color: black;
+}
+.sq3{
+background-color: red;
+}
+.sq4{
+background-color: green;
+}
