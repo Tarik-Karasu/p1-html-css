@@ -1,0 +1,173 @@
+:root{
+  --accent: #2a4bd6;
+  --max-width: 1100px;
+}
+
+body{
+  font-family: "Georgia", serif;
+  margin: 40px 0;
+  color: #111;
+}
+
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.navbar{
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  gap: 16px;
+}
+
+/* logo 1 / menu 2 / login 1 -> logo/login = 1/4 each, menu = 1/2 */
+.navbar .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar .menu {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* visual text (allowed) */
+.logo a{
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 28px;
+  margin: 0;
+}
+
+/* menu items laid out with flex only */
+.menu nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 72px; /* afstand tussen links */
+}
+
+.menu nav a{
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 28px;
+  margin: 0;
+}
+
+.login a{
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* responsive: switch to column using flex only */
+@media (max-width: 780px){
+  header.navbar{
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .navbar .logo,
+  .navbar .menu,
+  .navbar .login {
+    flex: none;
+    width: 100%;
+  }
+  .menu nav ul{
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .login a{ font-size:
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.navbar{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+
+
+.navbar .logo {
+     flex: 1; display: 
+     flex;
+      align-items: 
+      center; 
+      justify-content: 
+      flex-start; 
+    }
+.navbar .menu { 
+    flex: 2;
+    display: 
+    flex; 
+    align-items: 
+    center; 
+    justify-content: 
+    center;
+ }
+.navbar .login { 
+    flex: 1; 
+    display: 
+    flex; 
+    align-items: 
+    center; 
+    justify-content: 
+    flex-end; }
+
+
+.logo a{
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin: 0; 
+}
+
+
+.menu nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;             
+  justify-content: center
+  gap: 56px;                 
+}
+
+.menu nav a{
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 28px;
+  transition: color .15s ease;
+}
+
+.menu nav a:hover{
+  color: #1533a8;
+}
+
+.login a{
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 22px;
+  margin: 0; 
+}
+.home .aboutme .myprojects .contactme{
+    gap: 20px;
+    
+}
